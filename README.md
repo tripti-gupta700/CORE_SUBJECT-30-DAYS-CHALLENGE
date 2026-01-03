@@ -1,1 +1,2 @@
 # CORE_SUBJECT-30-DAYS-CHALLENGE
+2 january 2026 to 9 january 2026 - OOPS Mastery 
