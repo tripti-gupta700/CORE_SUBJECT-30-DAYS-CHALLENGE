@@ -1,0 +1,112 @@
+1️⃣ What is OOPS? (Object-Oriented Programming System)
+
+Interview Answer:
+
+OOPS is a programming approach where we write code by thinking in terms of real-world objects instead of only functions and logic.
+
+Each object has properties (data) and behaviors (methods), just like things around us in real life.
+
+Real-life example:
+
+Think of a mobile phone.
+
+Properties: brand, color, battery
+
+Behaviors: call(), message(), charge()
+
+In OOPS, we design software in the same way—by modeling real-world things as objects.
+
+One-line backup (if interviewer pushes):
+
+OOPS helps us structure code in a way that matches how humans naturally think about the world.
+
+2️⃣ Why do we use OOPS?
+
+Interview Answer:
+
+We use OOPS to make code easy to understand, reusable, scalable, and maintainable.
+
+Explain with a real-life situation:
+
+Imagine building a college management system.
+Instead of writing everything again and again, we create:
+
+Student
+
+Teacher
+
+Course
+
+Each has its own data and actions.
+If something changes, we update it in one place, not everywhere.
+
+Key benefits (say calmly):
+
+Code is organized
+
+Easy to reuse
+
+Easy to modify
+
+Suitable for large applications
+
+Short punchline:
+
+OOPS saves time, reduces errors, and makes large projects manageable.
+
+3️⃣ What is a Class?
+
+Interview Answer:
+
+A class is a blueprint or template that defines what an object will look like and what it can do.
+
+Real-life example (very effective):
+
+A class is like a blueprint of a house.
+The blueprint decides:
+
+number of rooms
+
+design
+
+structure
+
+But the blueprint itself is not the house.
+
+Programming connection:
+
+Similarly, a class defines variables and methods, but no memory is used until an object is created.
+
+4️⃣ What is an Object?
+
+Interview Answer:
+
+An object is a real instance of a class.
+It represents an actual thing that exists and can be used.
+
+Real-life example (continue house example):
+
+If class is the blueprint,
+then the actual house built using that blueprint is the object.
+
+Another quick example (very relatable):
+
+Class: Student
+
+Object:
+
+Name: Tripti
+
+Roll No: 21
+
+Branch: CSE
+
+Each student is an object of the Student class.
+
+5️⃣ Ultra-short summary (great for confidence)
+
+If they ask you to summarize:
+
+OOPS is about designing programs using real-world objects.
+A class is a blueprint, and an object is the real thing created from that blueprint.
+We use OOPS to write clean, reusable, and maintainable code.
