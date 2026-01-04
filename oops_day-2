@@ -1,0 +1,53 @@
+🔹 Encapsulation – Interview Ready Script
+
+Encapsulation is an OOPS concept where data and the methods that operate on that data are wrapped into a single unit, and direct access to the data is restricted.
+
+In simple words, encapsulation means data hiding with controlled access.
+
+A real-life example is an ATM machine.
+When we use an ATM, we can withdraw money or check balance, but we cannot directly access or modify the bank’s database.
+The internal data is hidden, and we interact with it only through allowed operations.
+
+Similarly, in programming, we keep variables private and allow access through public methods.
+This protects data from misuse and improves security and maintainability.
+
+🔹 Why Encapsulation is Used – Script
+
+Encapsulation is used to protect data, prevent unauthorized access, and make the code easier to maintain.
+It also allows us to change the internal implementation without affecting other parts of the program.
+
+🔹 Access Modifiers – Interview Ready Script
+
+Access modifiers are used to define the visibility or accessibility of classes, variables, and methods in a program.
+They help us control how data is accessed and are an important part of encapsulation.
+
+🔹 Types of Access Modifiers – Script with Real Life Examples
+🔒 Private
+
+Private members are accessible only within the same class.
+A real-life example is an ATM PIN, which only the account holder and bank system can access.
+
+🏠 Default
+
+Default access allows access only within the same package.
+It is like internal office information used only by people in the same department.
+
+🛡️ Protected
+
+Protected members are accessible within the same package and also by subclasses.
+A real-life example is family property, which is shared with children but not outsiders.
+
+🌍 Public
+
+Public members can be accessed from anywhere.
+For example, a public website that anyone can visit.
+
+🔹 Encapsulation + Access Modifiers – Final Script
+
+Encapsulation is implemented using access modifiers.
+We usually make data members private and provide public methods to access them in a controlled manner.
+This ensures security, data integrity, and clean code design.
+
+🔥 One-Line Closing (Very Impressive)
+
+Encapsulation hides the data, and access modifiers decide who can access it.
