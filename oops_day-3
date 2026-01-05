@@ -1,0 +1,136 @@
+✅ VERSION 1: IN-DEPTH EXPLANATION (Detailed & Clear)
+🔹 Inheritance – Detailed Explanation
+
+Inheritance is an important concept of Object-Oriented Programming where one class acquires the properties and methods of another class.
+It helps in reusing existing code and extending it to create new functionality.
+
+The class whose properties are inherited is called the parent or base class, and the class that inherits those properties is called the child or derived class.
+
+Inheritance creates a parent–child relationship between classes, making the program more organized and structured.
+
+🔹 Real-Life Example of Inheritance
+
+A common real-life example is a parent and child relationship.
+A child inherits qualities like surname or property from the parent but also has their own individual characteristics.
+
+Similarly, in programming, a child class can use the common properties of a parent class and can also add new features specific to itself.
+
+🔹 Why Inheritance Is Used
+
+Inheritance is mainly used to:
+
+Achieve code reusability
+
+Reduce code duplication
+
+Improve maintainability
+
+Represent real-world hierarchical relationships
+
+It is especially useful in large applications where many classes share common behavior.
+
+🔹 Types of Inheritance
+1️⃣ Single Inheritance
+
+In single inheritance, one child class inherits from one parent class.
+
+Example:
+A Student class inherits from a Person class, gaining common attributes like name and age.
+
+2️⃣ Multiple Inheritance
+
+In multiple inheritance, one child class inherits from more than one parent class.
+
+Example:
+A Smartphone inherits features of both a Camera and a Phone.
+
+📌 Java Note:
+Java does not support multiple inheritance with classes because it can create ambiguity, but it supports it using interfaces.
+
+3️⃣ Multilevel Inheritance
+
+In multilevel inheritance, a class is derived from another derived class, forming a chain of inheritance.
+
+Example:
+Grandparent → Parent → Child
+
+Each level inherits features from the previous level.
+
+4️⃣ Hybrid Inheritance
+
+Hybrid inheritance is a combination of two or more types of inheritance.
+
+Example:
+A system that uses both single and multiple inheritance together.
+
+📌 In Java, hybrid inheritance is implemented using interfaces, not classes.
+
+🔹 Diamond Problem – Detailed Explanation
+
+The Diamond Problem occurs in multiple inheritance when a class inherits from two classes that have a common parent class.
+
+Real-Life Explanation
+
+Consider a Person class.
+Two classes, Teacher and Athlete, inherit from Person.
+Now, a Student class inherits from both Teacher and Athlete.
+
+If Person has a method like getRole(), the compiler cannot decide which inherited method should be used.
+This confusion is called the Diamond Problem.
+
+🔹 Why Diamond Problem Occurs
+
+It occurs due to multiple inheritance paths leading to the same parent class, causing ambiguity in method resolution.
+
+🔹 How Java Solves the Diamond Problem
+
+Java avoids this issue by:
+
+Not allowing multiple inheritance with classes
+
+Allowing multiple inheritance only through interfaces, where ambiguity is resolved by explicit method implementation
+
+🔹 Closing Statement
+
+Inheritance improves code reusability and structure, but unrestricted multiple inheritance can cause ambiguity, which is why Java handles it carefully.
+
+✅ VERSION 2: INTERVIEW-READY CRISP ANSWER (1–2 Minutes)
+🔹 Inheritance – Interview Answer
+
+Inheritance is an OOPS concept where one class acquires the properties and methods of another class.
+It helps in code reusability and building new functionality on top of existing code.
+
+The class that provides data is called the parent class, and the class that inherits it is called the child class.
+
+🔹 Real-Life Example
+
+A parent and child relationship is a simple example.
+A child inherits properties from the parent and can also have its own features.
+
+🔹 Why Inheritance Is Used
+
+Inheritance is used to reduce code duplication, improve maintainability, and represent hierarchical relationships between classes.
+
+🔹 Types of Inheritance
+
+There are four main types of inheritance:
+
+Single: one child, one parent
+
+Multiple: one child, multiple parents
+
+Multilevel: inheritance in a chain
+
+Hybrid: combination of multiple types
+
+Java supports multiple and hybrid inheritance using interfaces, not classes.
+
+🔹 Diamond Problem
+
+The Diamond Problem occurs in multiple inheritance when a class inherits from two classes that share a common parent, causing ambiguity in method resolution.
+
+Java avoids this problem by not supporting multiple inheritance with classes and using interfaces instead.
+
+🔹 One-Line Closing
+
+Inheritance promotes reusability, but Java restricts multiple inheritance with classes to avoid ambiguity.

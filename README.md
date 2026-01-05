@@ -1,11 +1,23 @@
 # CORE_SUBJECT-30-DAYS-CHALLENGE
 2 january 2026 to 9 january 2026 - OOPS Mastery 
-3/01/2026 - what is oops
+3/01/2026 - 
 
-            Why oops??
+    what is oops
 
-            class & objects
+    Why oops??
 
-4/01/2026 -  Encapsulation
+    class & objects
 
-             Access modifiers
+4/01/2026 -  
+
+    Encapsulation
+
+    Access modifiers
+
+5/01/2026 -
+    
+    Inheritance
+
+    types of inheritance
+
+    diamond problem
