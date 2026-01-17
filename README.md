@@ -28,3 +28,7 @@
 7/01/2026 - 
 
     Abstraction
+
+from 9/01/2026 to 26/01/2026-
+
+    DBMS in detail 
