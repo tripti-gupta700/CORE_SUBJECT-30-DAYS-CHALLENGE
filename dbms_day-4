@@ -1,0 +1,180 @@
+NORMALISATION
+
+Attribute Closure in DBMS
+
+Functional dependency and attribute closure are essential for maintaining data integrity and building effective, organized and normalized databases. Attribute closure of an attribute set can be defined as set of attributes which can be functionally determined from it.
+
+How to find attribute closure of an attribute set?
+To find attribute closure of an attribute set: 
+
+Add elements of attribute set to the result set.
+Recursively add elements to the result set which can be functionally determined from the elements of the result set.
+Using FD set of table 1, attribute closure can be determined as: 
+
+(STUD_NO)++= {STUD_NO, STUD_NAME, STUD_PHONE, STUD_STATE, STUD_COUNTRY, STUD_AGE}
+(STUD_STATE)+ = {STUD_STATE, STUD_COUNTRY}
+
+Important Points About Attribute Closure
+Helps to identify all possible attributes that can be derived from a set of given attributes.
+Helps in database design by showing how attributes and tables are related, which can improve query performance.
+Can be computationally expensive, especially for large datasets.
+Become complex to manage as the number of attributes and tables increases.
+How to Find Candidate Keys and Super Keys Using Attribute Closure?
+If attribute closure of an attribute set contains all attributes of relation, the attribute set will be super key of the relation.
+If no subset of this attribute set can functionally determine all attributes of the relation, the set will be candidate key as well. For Example, using FD set of table 1
+(STUD_NO, STUD_NAME)+ = {STUD_NO, STUD_NAME, STUD_PHONE, STUD_STATE, STUD_COUNTRY, STUD_AGE} 
+
+(STUD_NO)+= {STUD_NO, STUD_NAME, STUD_PHONE, STUD_STATE, STUD_COUNTRY, STUD_AGE} 
+
+(STUD_NO, STUD_NAME) will be super key but not candidate key because its subset (STUD_NO)+ is equal to all attributes of the relation. So, STUD_NO will be a candidate key. 
+
+Prime and Non-Prime Attributes
+Attributes which are parts of any candidate key of relation are called as prime attribute, others are non-prime attributes. For Example, STUD_NO in STUDENT relation is prime attribute, others are non-prime attribute. 
+
+Armstrongs Axioms in Functional Dependency in DBMS
+
+Armstrongs Axioms refer to a set of inference rules, introduced by William W. Armstrong, that are used to test the logical implication of functional dependencies. Given a set of functional dependencies F, the closure of F (denoted as F+) is the set of all functional dependencies logically implied by F. Armstrongs Axioms, when applied repeatedly, help generate the closure of functional dependencies.
+
+These axioms are fundamental in determining functional dependencies in databases and are used to derive conclusions about the relationships between attributes.
+
+Axioms
+axioms
+Axioms
+Axiom of Reflexivity: If A is a set of attributes and B is a subset of A, then A holds B. If B⊆A then A→B. This property is trivial property.
+Axiom of Augmentation: If A→B holds and Y is the attribute set, then AY→BY also holds. That is adding attributes to dependencies, does not change the basic dependencies. If A→B, then AC→BC for any C.
+Axiom of Transitivity: Same as the transitive rule in algebra, if A→B holds and B→C holds, then A→C also holds. A→B is called A functionally which determines B. If X→Y and Y→Z, then X→Z.
+Example:
+
+Lets assume the following functional dependencies:
+
+{A} → {B}
+{B} → {C}
+{A, C} → {D}
+
+1. Reflexivity: Since any set of attributes determines its subset, we can immediately infer the following:
+
+{A} → {A} (A set always determines itself).
+{B} → {B}.
+{A, C} → {A}.
+2. Augmentation: If we know that {A} → {B}, we can add the same attribute (or set of attributes) to both sides:
+
+From {A} → {B}, we can augment both sides with {C}: {A, C} → {B, C}.
+From {B} → {C}, we can augment both sides with {A}: {A, B} → {C, B}.
+3. Transitivity: If we know {A} → {B} and {B} → {C}, we can infer that:
+
+{A} → {C} (Using transitivity: {A} → {B} and {B} → {C}).
+Although Armstrongs axioms are sound and complete, there are additional rules for functional dependencies that are derived from them. These rules are introduced to simplify operations and make the process easier.
+
+Secondary Rules
+These rules can be derived from the above axioms.
+
+Union: If A→B holds and A→C holds, then A→BC holds. If X→Y and X→Z then X→YZ.
+Composition: If A→B and X→Y hold, then AX→BY holds.
+Decomposition: If A→BC holds then A→B and A→C hold. If X→YZ then X→Y and X→Z.
+Pseudo Transitivity: If A→B holds and BC→D holds, then AC→D holds. If X→Y and YZ→W then XZ→W.
+Example:
+
+Lets assume we have the following functional dependencies in a relation schema:
+
+{A} → {B}
+{A} → {C}
+{X} → {Y}
+{Y, Z} → {W}
+
+Now, lets apply the Secondary Rules to derive new functional dependencies.
+
+1. Union Rule: If A → B and A → C, then by the Union Rule, we can infer:
+
+A → BC This means if A determines both B and C, it also determines their combination, BC.
+2. Composition Rule: If A → B and X → Y hold, then by the Composition Rule, we can infer:
+
+AX → BY
+3. Decomposition Rule: If A → BC holds, then by the Decomposition Rule, we can infer:
+
+A → B and A → C
+4. Pseudo Transitivity Rule: If A → B and BC → D hold, then by the Pseudo Transitivity Rule, we can infer:
+
+AC → D
+Armstrong Relation
+Armstrong Relation can be stated as a relation that is able to satisfy all functional dependencies in the F+ Closure. In the given set of dependencies, the size of the minimum Armstrong Relation is an exponential function of the number of attributes present in the dependency under consideration.
+
+
+Why Armstrong Axioms Are Considered Sound and Complete?
+
+Soundness: Armstrongs axioms are sound because any functional dependency inferred using them will always be valid and hold true in every relation state that satisfies the original set of dependencies.
+
+Completeness: Armstrongs axioms are complete because applying them repeatedly will generate all possible functional dependencies that can be derived from the original set, ensuring no dependencies are missed.
+
+
+
+The Problem of Redundancy in Database
+
+Redundancy means having multiple copies of the same data in the database. This problem arises when a database is not normalized. Suppose a table of student details attributes is: student ID, student name, college name, college rank, and course opted.
+
+Student_ID    	Name            	Contact             	College         	Course        	Rank  
+
+100	Himanshu	7300934851	GEU	B. Tech	1
+
+101	Ankit	7900734858	GEU	B. Tech	1
+
+102	Ayush	7300936759	GEU	B. Tech	1
+
+103	Ravi	7300901556	GEU	B. Tech	1
+
+
+Anomalies
+
+It can be observed that values of attribute college name, college rank, and course are being repeated which can lead to problems. Major problems caused due to redundancy are called anomalies. The following types of anomalies are caused due to redundancy:
+
+Insertion anomaly
+
+Deletion anomaly
+
+Updation anomaly
+
+1. Insertion Anomaly
+In Insertion anomaly, If a student detail has to be inserted whose course is not being decided yet then insertion will not be possible till the time course is decided for the student. 
+
+Student_ID        	Name        	Contact       	College      	Course      	Rank   
+
+100	Himanshu	7300934851	GEU	 	1
+
+Note: This problem happens when the insertion of a data record is not possible without adding some additional unrelated data to the record. 
+
+2. Deletion Anomaly
+
+In Deletion anomaly, If the details of students in this table are deleted then the details of the college will also get deleted which should not occur by common sense. This anomaly happens when the deletion of a data record results in losing some unrelated information that was stored as part of the record that was deleted from a table.  
+
+Note: It is not possible to delete some information without losing some other information in the table as well.
+
+3. Updation Anomaly
+
+In Updation anomaly, Suppose the rank of the college changes then changes will have to be all over the database which will be time-consuming and computationally costly. All places should be updated, If updation does not occur at all places then the database will be in an inconsistent state. 
+
+Student_ID	Name	Contact	College	Course	Rank
+100	Himanshu	7300934851	GEU	B. Tech	1
+101	Ankit	7900734858	GEU	B. Tech	1
+102	Ayush	7300936759	GEU	B. Tech	1
+103	Ravi	7300901556	GEU	B. Tech	1
+
+
+Note: Redundancy in a database occurs when the same data is stored in multiple places. Redundancy can cause various problems such as data inconsistencies, higher storage requirements, and slower data retrieval.
+
+
+Problems Caused Due to Redundancy
+
+Data Inconsistency and Integrity Issues: Multiple copies of the same data can become inconsistent if all are not updated simultaneously, leading to inaccurate or unreliable information.
+
+Increased Storage Requirements: Redundant data consumes extra storage space, increasing storage costs and reducing system efficiency.
+
+Update Anomalies and Performance Problems: Any change to redundant data must be made in multiple places, slowing down operations and increasing the chance of update errors.
+
+Maintenance Complexity: Managing, updating, and synchronizing multiple data copies makes maintenance more time-consuming and error-prone.
+
+Security and Privacy Risks: More copies of the same data create more points of vulnerability, increasing the risk of unauthorized access or data breaches.
+
+Data Duplication and Wastage: Repeated storage of identical data leads to unnecessary duplication, wasting both space and administrative effort.
+
+Usability and Accessibility Issues: Users may face confusion in identifying the correct or latest version of data, reducing productivity and trust in the system.
+
+Note: To prevent redundancy in a database, Normalization is used, which is the process of organizing data in a database to eliminate redundancy and improve data integrity. 

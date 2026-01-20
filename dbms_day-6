@@ -1,0 +1,258 @@
+🔥 SQL INTERVIEW QUESTIONS (INTERVIEW-READY)
+
+🔹 1. SQL BASICS (MOST IMPORTANT)
+
+⭐ What is SQL?
+
+Answer:
+SQL (Structured Query Language) is used to store, retrieve, manipulate, and manage data in relational databases.
+
+⭐ Is SQL case-sensitive?
+
+Answer:
+No, SQL keywords are not case-sensitive, but data stored in the database may be.
+
+⭐ What are the types of SQL commands?
+
+Answer:
+
+DDL – CREATE, ALTER, DROP
+
+DML – INSERT, UPDATE, DELETE
+
+DQL – SELECT
+
+DCL – GRANT, REVOKE
+
+TCL – COMMIT, ROLLBACK, SAVEPOINT
+
+⭐ Difference between DELETE, DROP, and TRUNCATE?
+DELETE	TRUNCATE	DROP
+Removes rows	Removes all rows	Removes table
+WHERE allowed	WHERE not allowed	Structure deleted
+Can rollback	Cannot rollback	Cannot rollback
+🔹 2. SELECT QUERY & CLAUSES
+⭐ What is SELECT?
+
+Answer:
+Used to retrieve data from one or more tables.
+
+⭐ Difference between WHERE and HAVING?
+
+Answer:
+
+WHERE filters rows before grouping
+
+HAVING filters groups after GROUP BY
+
+⭐ What is ORDER BY?
+
+Answer:
+Used to sort results in ascending (ASC) or descending (DESC) order.
+
+⭐ What is GROUP BY?
+
+Answer:
+Groups rows that have the same values in specified columns.
+
+⭐ Can we use WHERE with GROUP BY?
+
+Answer:
+Yes, WHERE is used before grouping.
+
+🔹 3. KEYS & CONSTRAINTS
+⭐ What is a primary key?
+
+Answer:
+A unique identifier that cannot be NULL.
+
+⭐ What is a foreign key?
+
+Answer:
+A key that references the primary key of another table.
+
+⭐ Can a table have multiple primary keys?
+
+Answer:
+No, but it can have a composite primary key.
+
+⭐ What are constraints in SQL?
+
+Answer:
+Rules to enforce data integrity.
+
+Types:
+PRIMARY KEY, FOREIGN KEY, UNIQUE, NOT NULL, CHECK, DEFAULT
+
+🔹 4. JOINS (VERY VERY IMPORTANT)
+⭐ What is a JOIN?
+
+Answer:
+Used to combine rows from two or more tables based on a related column.
+
+⭐ Types of JOINs?
+JOIN	Meaning
+INNER JOIN	Matching records
+LEFT JOIN	All left + matched
+RIGHT JOIN	All right + matched
+FULL JOIN	All records
+⭐ Difference between INNER JOIN and LEFT JOIN?
+
+Answer:
+INNER JOIN returns only matching records, LEFT JOIN returns all left table records.
+
+⭐ What is SELF JOIN?
+
+Answer:
+Joining a table with itself.
+
+🔹 5. AGGREGATE FUNCTIONS
+⭐ What are aggregate functions?
+
+Answer:
+Functions that operate on multiple rows and return a single value.
+
+Examples:
+COUNT(), SUM(), AVG(), MIN(), MAX()
+
+⭐ Difference between COUNT(*) and COUNT(column)?
+
+Answer:
+
+COUNT(*) → counts all rows
+
+COUNT(column) → ignores NULL values
+
+🔹 6. SUBQUERIES & NESTED QUERIES
+⭐ What is a subquery?
+
+Answer:
+A query inside another query.
+
+⭐ Types of subqueries?
+
+Answer:
+
+Single-row
+
+Multi-row
+
+Correlated subquery
+
+⭐ Difference between IN and EXISTS?
+
+Answer:
+
+IN checks values
+
+EXISTS checks existence of rows
+
+🔹 7. VIEWS & INDEXES
+⭐ What is a VIEW?
+
+Answer:
+A virtual table created using a SELECT query.
+
+⭐ Why use views?
+
+Answer:
+
+Security
+
+Simplifies complex queries
+
+Data abstraction
+
+⭐ What is an INDEX?
+
+Answer:
+A database object that improves query performance.
+
+⭐ Does index increase INSERT time?
+
+Answer:
+Yes, because index must be updated.
+
+🔹 8. NULL & FUNCTIONS
+⭐ What is NULL?
+
+Answer:
+Represents missing or unknown data.
+
+⭐ Difference between NULL and 0?
+
+Answer:
+NULL means no value, 0 is a value.
+
+⭐ How to handle NULL values?
+
+Answer:
+Using functions like IFNULL(), COALESCE().
+
+🔹 9. TRANSACTIONS (FRESHER FAVORITE)
+⭐ What is a transaction?
+
+Answer:
+A set of operations executed as a single unit.
+
+⭐ What is ACID?
+
+Answer:
+
+Atomicity – All or nothing
+
+Consistency – Valid state
+
+Isolation – Independent transactions
+
+Durability – Permanent changes
+
+⭐ Difference between COMMIT and ROLLBACK?
+
+Answer:
+COMMIT saves changes, ROLLBACK undoes changes.
+
+🔹 10. SQL VS DBMS (COMMON HR QUESTION)
+⭐ Difference between SQL and MySQL?
+
+Answer:
+
+SQL → language
+
+MySQL → database software
+
+🔥 RAPID FIRE (VERY COMMON)
+
+Which clause is executed first in SQL? → FROM
+
+Can WHERE use aggregate functions? → No
+
+Can HAVING be used without GROUP BY? → Yes
+
+Which join returns unmatched rows? → LEFT/RIGHT JOIN
+
+Which constraint prevents duplicate values? → UNIQUE
+
+🔥 MOST ASKED PRACTICAL QUESTIONS
+
+Find second highest salary
+
+Count employees per department
+
+Fetch duplicate records
+
+Find employees without manager
+
+Get max salary from each department
+
+(If you want, I’ll give queries + logic)
+
+🎯 INTERVIEW STRATEGY (IMPORTANT)
+
+For freshers:
+
+Speak clear logic, not heavy syntax
+
+Use keywords: data integrity, performance, optimization
+
+Don’t panic if you forget exact query — explain approach

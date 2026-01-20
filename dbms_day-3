@@ -1,0 +1,50 @@
+Generalization, Specialization and Aggregation in ER Model
+Using the ER model for larger datasets creates a lot of complexity when designing a database model. To minimize the complexity, Generalization, Specialization, and Aggregation were introduced in the ER model. These were used for data abstraction. In which an abstraction mechanism is used to hide the details of a set of objects. 
+
+
+Generalization
+Process of extracting common properties from a set of entities and creating a generalized entity from it. It is a bottom-up approach in which two or more entities can be generalized to a higher-level entity if they have some attributes in common.
+
+6
+Generalization
+Example: STUDENT and FACULTY can be generalized to a higher-level entity called PERSON as shown in diagram below. In this case, common attributes like P_NAME and P_ADD become part of a higher entity (PERSON) and specialized attributes like S_FEE become part of a specialized entity (STUDENT). 
+
+Specialization
+In specialization, an entity is divided into sub-entities based on its characteristics. It is a top-down approach where the higher-level entity is specialized into two or more lower-level entities.
+
+5
+Specialization
+Example: an EMPLOYEE entity in an Employee management system can be specialized into DEVELOPER, TESTER, etc. In this case, common attributes like E_NAME, E_SAL, etc. become part of a higher entity (EMPLOYEE) and specialized attributes like TES_TYPE become part of a specialized entity (TESTER). 
+
+Inheritance
+It is an important feature of generalization and specialization. In specialization, a higher-level entity is divided into lower-level sub-entities that inherit its attributes. In generalization, similar lower-level entities are combined into a higher-level entity that holds common attributes. In both cases, inheritance allows sub-entities to reuse the properties of the parent entity.
+
+Attribute inheritance: It allows lower level entities to inherit the attributes of higher level entities but not vice versa. In diagram Car entity is an inheritance of Vehicle entity ,So Car can acquire attributes of Vehicle. Example: Car can acquire Model attribute of Vehicle.
+Relationship Inheritance: Sub-entities also inherit relationships of the parent entity.
+Overriding Inheritance: Sub-entities can override or add their own attributes or behaviors different from the parent.
+Participation inheritance: Participation inheritance in ER modeling refers to the inheritance of participation constraints from a higher-level entity (superclass) to a lower-level entity (subclass). It ensures that subclasses adhere to the same participation rules in relationships, although attributes and relationships themselves are inherited differently.
+4
+Example of Relation
+Example: In diagram Vehicle entity has an relationship with Cycle entity, but it would not automatically acquire the relationship itself with the Vehicle entity. Participation inheritance only refers to the inheritance of participation constraints, not the actual relationships between entities. 
+
+Aggregation
+An ER diagram is not capable of representing the relationship between an entity and a relationship which may be required in some scenarios.
+In those cases, a relationship with its corresponding entities is aggregated into a higher-level entity.
+Aggregation is an abstraction through which we can represent relationships as higher-level entity sets.
+3
+Aggregation
+Example: an Employee working on a project may require some machinery. So, REQUIRE relationship is needed between the relationship WORKS_FOR and entity MACHINERY. Using aggregation, WORKS_FOR relationship with its entities EMPLOYEE and PROJECT is aggregated into a single entity and relationship REQUIRE is created between the aggregated entity and MACHINERY.
+
+Representing Aggregation Via Schema
+To represent aggregation in a relational schema, follow these steps:
+
+1. Create Schema for the Aggregated Relationship
+
+This will be treated like an entity set.
+It includes the primary keys of the participating entities in the base relationship.
+It also includes any descriptive attributes of the base relationship.
+2. Create Schema for the Higher-Level Relationship (Aggregation)
+
+This schema includes: The primary key of the aggregated relationship schema.
+The primary key of the associated entity it relates to.
+Any additional descriptive attributes of this higher-level relationship.
